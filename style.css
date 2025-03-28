@@ -9,7 +9,6 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-
 .container {
     max-width: 1296px;
     margin: 0 auto;
@@ -19,11 +18,9 @@ body {
     justify-content: space-between;
 }
 
-
 .logo {
     height: 40px;
 }
-
 
 .menu {
     display: flex;
@@ -44,13 +41,11 @@ body {
     text-decoration: none;
 }
 
-
 .burger {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
-
 
 @media (max-width: 800px) {
     .menu {
@@ -63,6 +58,7 @@ body {
         width: 200px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 10px;
+        z-index: 10;
     }
 
     .menu a:hover {
@@ -79,16 +75,127 @@ body {
         display: flex;
     }
 
-
     .burger {
         display: block;
     }
 }
 
 .underheader {
-
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .photounderheader {
     width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    z-index: 2;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #00A256;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 2;
+    position: relative;
+    max-width: 250px;
+}
+
+.hero-button:hover {
+    background-color: #008a45;
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero-button {
+        font-size: 16px;
+        padding: 12px 24px;
+        max-width: 200px;
+    }
+}
+
+.about,
+.eco-bonuses {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content,
+.bonuses-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image,
+.bonuses-image {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text,
+.bonuses-text {
+    width: 50%;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+
+    .about-content,
+    .bonuses-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image,
+    .bonuses-image,
+    .about-text,
+    .bonuses-text {
+        width: 100%;
+    }
 }
